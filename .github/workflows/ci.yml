@@ -26,9 +26,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 black
 
-    - name: Check formatting with black
+    - name: Run test suite
       run: |
-        black .
+        python -m unittest discover -v
 
     - name: Lint with flake8
       run: |
@@ -36,6 +36,10 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # Exit-zero treats all errors as warnings
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Check formatting with black
+      run: |
+        black .
 
     - name: Run test suite
       run: |
