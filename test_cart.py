@@ -1,8 +1,3 @@
-"""
-Unit Test Suite for ShoppingCart — unittest version
-COMP 3304 - Week 10 Lab Assignment
-"""
-
 import unittest
 from cart import ShoppingCart
 
